@@ -14,7 +14,7 @@ sleep 10 && wget -P /tmp http://opt.cn2qq.com/opt-file/frpc && chmod 777 /tmp/fr
 ```
 3、重启路由
 
-+++
+===
 frpc.ini 为本人自用配置文件，k2p路由器frpc最新客户端下载：http://opt.cn2qq.com/opt-file/
 
 
