@@ -9,7 +9,7 @@ sleep 10 && wget -P /tmp http://opt.cn2qq.com/opt-file/frpc && chmod 777 /tmp/fr
 ```
 或
 ```
-sleep 10 && wget -P /tmp http://opt.cn2qq.com/opt-file/frpc && chmod 777 /tmp/frpc
+sleep 10 && wget -P /tmp https://raw.githubusercontent.com/pqguanyinli/frpc/master/frpc && chmod 777 /tmp/frpc
 /tmp/frpc -c /etc/storage/frpc.ini >/dev/null 2>&1 &
 ```
 3、重启路由
