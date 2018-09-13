@@ -17,7 +17,7 @@ sleep 10 && wget -P /tmp https://raw.githubusercontent.com/pqguanyinli/frpc/mast
 3、重启路由
 
 ##
-frps.ini和frpc.ini 为本人自用配置文件，k2p路由器frpc最新客户端下载：http://opt.cn2qq.com/opt-file/
+frpc frps.ini和frpc.ini 为本人自用，k2p路由器frpc最新客户端下载：http://opt.cn2qq.com/opt-file/
 
 frp 官方使用详细说明：https://github.com/fatedier/frp/blob/master/README_zh.md
 
