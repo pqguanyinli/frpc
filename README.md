@@ -21,6 +21,8 @@ frpc frps.ini和frpc.ini 为本人自用，k2p路由器frpc最新客户端下载
 
 frp 官方使用详细说明：https://github.com/fatedier/frp/blob/master/README_zh.md
 
+frp官方下载地址：https://github.com/fatedier/frp/releases
+
 vediotalk大神的frp安装方法 https://drive.google.com/open?id=1dQYczQITgDQPM3YlGAPovSrzhU7WQFvs
 
 
