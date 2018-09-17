@@ -352,7 +352,7 @@ systemctl status rc-local.service
 
 最后我们就可以在/etc/rc.loacl里，添加开机的自启命令什么的了。记住添加在exit 0之前。
 
-## FRP自启动设置方法：
+## FRP服务端自启动设置方法：
 
 以上步骤都完成后， 登录vps打开/etc/rc.loacl，在exit 0之前添加如下内容：
 ```
