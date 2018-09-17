@@ -23,7 +23,7 @@ frp 官方使用详细说明：https://github.com/fatedier/frp/blob/master/READM
 
 frp官方下载地址：https://github.com/fatedier/frp/releases
 
-## vediotalk大神:FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
+## vediotalk大神: FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
 
 frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到比较好的穿透效果，扩展性也很强。
 
@@ -289,3 +289,65 @@ custom_domains = nas.veelove.cn          #更换为自己的域名
 3.按照下图的序号号顺序操作，重启群晖NAS即可
 
 ![image](https://github.com/pqguanyinli/frpc/blob/master/images/5.png)
+
+## 扩展： Debian 9/Ubuntu 17+添加rc.local开机自启的方法
+
+说明：很多时候有些程序或者脚本都需要添加开机自启，最简单的方法就是使用rc.local自启，不过由于系统版本更替，很多新版本系统都没有rc.local文件了，
+
+比如Debian 9、Ubuntu 17.10、Ubuntu 18.04。这时候就需要我们手动设置下。
+
+方法：
+
+1、添加rc-local.service
+```
+#以下为一整条命令，一起复制运行
+cat > /etc/systemd/system/rc-local.service <<EOF
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+ 
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+ 
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+2、新建rc-local文件
+```
+#以下为一整条命令，一起复制运行
+cat > /etc/rc.local <<EOF
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+ 
+exit 0
+EOF
+```
+3、添加权限并设置开机自启
+```
+chmod +x /etc/rc.local
+systemctl enable rc-local
+systemctl start rc-local.service
+```
+检查状态：
+```
+systemctl status rc-local.service
+```
+返回Active:active信息，则成功。
+
+最后我们就可以在/etc/rc.loacl里，添加开机的自启命令什么的了。记住添加在exit 0之前。
