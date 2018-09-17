@@ -23,7 +23,7 @@ frp 官方使用详细说明：https://github.com/fatedier/frp/blob/master/READM
 
 frp官方下载地址：https://github.com/fatedier/frp/releases
 
-## vediotalk大神: FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
+## （转载） FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
 
 frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到比较好的穿透效果，扩展性也很强。
 
