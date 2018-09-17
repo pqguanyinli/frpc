@@ -292,9 +292,9 @@ custom_domains = nas.veelove.cn          #更换为自己的域名
 
 ## 扩展： Debian 9/Ubuntu 17+添加rc.local开机自启的方法
 
-说明：很多时候有些程序或者脚本都需要添加开机自启，最简单的方法就是使用rc.local自启，不过由于系统版本更替，很多新版本系统都没有rc.local文件了，
+说明：很多时候有些程序或者脚本都需要添加开机自启，最简单的方法就是使用rc.local自启，不过由于系统版本更替，
 
-比如Debian 9、Ubuntu 17.10、Ubuntu 18.04。这时候就需要我们手动设置下。
+很多新版本系统都没有rc.local文件了，比如Debian 9、Ubuntu 17.10、Ubuntu 18.04。这时候就需要我们手动设置下。
 
 方法：
 
