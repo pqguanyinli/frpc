@@ -180,13 +180,13 @@ custom_domains = www.veelove.cn
 ![image](https://github.com/pqguanyinli/frpc/blob/master/images/2.jpg)
 
 3.输入命令
-``
+```
 sudo -i
-``
+```
 4.设置root密码
-`
+```
 synouser --setpw root XXX
-`
+```
 【XXX便是你要修改的密码】
 
 ②.客户端调试
