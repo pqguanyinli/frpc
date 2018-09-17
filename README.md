@@ -177,7 +177,7 @@ custom_domains = www.veelove.cn
 
 2.终端输入命令ssh admin@192.168.1.201登录，密码为群辉NAS的用户密码（地址修改为自己的NAS地址，win用户用Putty这个软件登录）
 
-![image](https://github.com/pqguanyinli/frpc/blob/master/images/2.jpg)
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/2.png)
 
 3.输入命令
 ```
@@ -192,13 +192,13 @@ synouser --setpw root XXX
 ②.客户端调试
 
 1.使用root用户登录群晖6.1
-`
+```
 ssh root@192.168.1.201
-`
+```
 (地址修改为自己的群晖NAS地址)
 
 2.群晖NAS登陆后台配置文件
-`
+```
 [common]
 server_addr = 118.24.127.138
 server_port = 7000
@@ -214,9 +214,9 @@ type = http
 local_ip = 127.0.0.1           
 local_port = 5000                     #群晖NAS登陆地址端口是5000
 custom_domains = nas.veelove.cn
-`
+```
 2.使用群晖NAS手机APP的DS photo软件在外网访问配置文件
-``
+```
 [common]
 server_addr = 118.24.127.138
 server_port = 7000
@@ -239,9 +239,9 @@ local_ip = 127.0.0.1
 local_port = 80
 remote_port = 8000                    #需要做一个端口转发才可以实现APP登陆，端口自定义
 custom_domains = photo.veelove.cn
-``
+```
 九、外网访问esxi后台管理、群晖NAS、群晖NAS客户端DS Photo、LEDE软路由后台
-``
+```
 [common]
 server_addr = 118.24.127.138             #更换为自己服务器IP地址
 server_port = 7000
@@ -270,22 +270,22 @@ type = http                              #协议为http
 local_ip = 127.0.0.1
 local_port = 5000
 custom_domains = nas.veelove.cn          #更换为自己的域名
-``
+```
 十、用谷歌云和vultr服务器搭建frp无法使用 需要开放7000端口
 
 十一、如何让Frp在群晖中自动开机运行
 1.进入群晖控制面板》任务计划》新增》触发任务》用户定义的脚本
 
-![image](https://github.com/pqguanyinli/frpc/blob/master/images/3.jpg)
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/3.png)
  
 2.添加脚本
- ``
+```
 /root/frp/frpc -c /root/frp/frpc.ini
-``
+```
 上面的frp修改为你frp目录的文件名称，我在视频里面建议是修改为frp方便记忆
 
-![image](https://github.com/pqguanyinli/frpc/blob/master/images/4.jpg)
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/4.png)
 
 3.按照下图的序号号顺序操作，重启群晖NAS即可
 
-![image](https://github.com/pqguanyinli/frpc/blob/master/images/5.jpg)
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/5.png)
