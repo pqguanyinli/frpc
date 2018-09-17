@@ -172,7 +172,7 @@ custom_domains = www.veelove.cn
 ①.设置ROOT密码，获取群晖的ROOT权限
 
 1.打开控制面板,开启SSH功能
-
+![image](https://user-images.githubusercontent.com/34980980/38174986-2cc4056e-3608-11e8-9e58-f15839a9dc6d.jpg)
 
  
 
