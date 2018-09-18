@@ -274,6 +274,7 @@ custom_domains = nas.veelove.cn          #更换为自己的域名
 十、用谷歌云和vultr服务器搭建frp无法使用 需要开放7000端口
 
 十一、如何让Frp在群晖中自动开机运行
+
 1.进入群晖控制面板》任务计划》新增》触发任务》用户定义的脚本
 
 ![image](https://github.com/pqguanyinli/frpc/blob/master/images/3.png)
