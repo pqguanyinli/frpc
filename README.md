@@ -63,7 +63,7 @@ frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到
 
 也可以通过命令下载：
 ```
-wget https://github.com/fatedier/frp/releases/download/v0.16.1/frp_0.21.0_linux_amd64.tar.gz
+wget https://github.com/fatedier/frp/releases/download/v0.21.0/frp_0.21.0_linux_amd64.tar.gz
 ```
 3.在WINDOWS下用winscp软件登录，上传frp_0.21.0_linux_amd64.tar.gz至root目录
 
