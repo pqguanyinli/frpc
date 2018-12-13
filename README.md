@@ -274,6 +274,44 @@ custom_domains = nas.veelove.cn          #更换为自己的域名
 ```
 十、用谷歌云和vultr服务器搭建frp无法使用 需要开放7000端口
 
+（一）首先检查某端口是否开启：
+ ```
+firewall-cmd --query-port=80/tcp --zone=public  #查询80端口是否开启,自行修改端口号
+```
+返回no即未开启，显示yes为已开启。
+
+(二)开启某端口代码
+ ```
+firewall-cmd --zone=public --add-port=80/tcp --permanent #添加80端口，如需添加其他端口，自行修改端口号
+```
+修改完成后需要重启服务器才能生效
+
+(三)如果出现FirewallD is not running
+
+1.查看防火墙状态
+```
+systemctl status firewalld
+```
+有如下提示表示未开启
+
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/fw1.png)
+
+2.开启防火墙，没有任何提示即开启成功
+```
+systemctl start firewalld
+```
+3.再次查看防火墙状态
+```
+systemctl status firewalld
+```
+有如下提示表示已经开启成功
+
+![image](https://github.com/pqguanyinli/frpc/blob/master/images/fw2.png)
+
+4.关闭防火墙
+```
+systemctl stop firewalld
+```
 十一、如何让Frp在群晖中自动开机运行
 
 1.进入群晖控制面板》任务计划》新增》触发任务》用户定义的脚本
