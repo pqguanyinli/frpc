@@ -390,7 +390,7 @@ systemctl status rc-local.service
 
 以上步骤都完成后， 登录vps打开/etc/rc.loacl，在exit 0之前添加如下内容：
 ```
-cd /frp   #进入frp所在目录，根据实际情况修改
+cd /root/frp   #进入frp所在目录，根据实际情况修改
 
 nohup ./frps -c ./frps.ini &  #后台运行frp服务器
 ```
