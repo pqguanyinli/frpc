@@ -17,7 +17,7 @@ sleep 10 && wget -P /tmp https://raw.githubusercontent.com/pqguanyinli/frpc/mast
 /tmp/frpc -c /etc/storage/frpc.ini >/dev/null 2>&1 &
 ```
 ### 3、重启路由
-##
+
 ## FRP内网穿透不到两分钟就学会及扩展运用,轻松实现外网访问esxi后台管理界面、lede软路由后台、群晖NAS及ds photo登录
 
 frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到比较好的穿透效果，扩展性也很强。
