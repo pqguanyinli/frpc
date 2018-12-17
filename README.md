@@ -30,7 +30,7 @@ frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到
 
 注意：用国内服务器搭建，需要域名备案才能使用
 
-一、frp的作用
+### 一、frp的作用
 
 利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。
 
@@ -38,7 +38,7 @@ frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到
 
 利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机
 
-二、配置说明
+### 二、配置说明
 
 1、实现功能
 
@@ -56,7 +56,7 @@ frp内网穿透比ngrok要简单的多，无需多复杂的配置就可以达到
 
 （4）内网服务器部署一个web服务
 
-三、安装frp
+### 三、安装frp
 1、公网服务器与内网服务器都需要下载frp进行安装
 
 2、下载地址是https://github.com/fatedier/frp/releases
@@ -89,7 +89,7 @@ vhost_https_port = 443
 ```
 按”i”键进行编辑，按“esc”退出编辑状态，输入“:wq”退出
 
-四、启动服务端
+### 四、启动服务端
 
 临时启动
 ```
@@ -99,7 +99,7 @@ vhost_https_port = 443
 ```
 nohup ./frps -c ./frps.ini &
 ```
-五、配置客户端
+### 五、配置客户端
 ``` 
 vi ./frpc.ini
 ```
@@ -123,7 +123,7 @@ local_port = 80                 #内网web服务的端口号
 custom_domains = www.veelove.cn,veelove.cn   
 #所绑定的公网服务器域名，一级、二级域名都可以，绑定多个域名时用英文“,”分开
 ```
-六、启动客户端
+### 六、启动客户端
 
 临时启动
 ```
@@ -133,7 +133,7 @@ custom_domains = www.veelove.cn,veelove.cn
 ```
 nohup ./frpc -c ./frpc.ini &
 ```
-七、穿透公司代理内网
+### 七、穿透公司代理内网
 
 1.修改服务端配置文件
 ```
@@ -168,7 +168,7 @@ custom_domains = www.veelove.cn
 ```
 服务端与客户端启动方式不变，参照四、六。
 
-八、群晖NAS使用frp穿透服务
+### 八、群晖NAS使用frp穿透服务
 
 ①.设置ROOT密码，获取群晖的ROOT权限
 
@@ -241,7 +241,7 @@ local_port = 80
 remote_port = 8000                    #需要做一个端口转发才可以实现APP登陆，端口自定义
 custom_domains = photo.veelove.cn
 ```
-九、外网访问esxi后台管理、群晖NAS、群晖NAS客户端DS Photo、LEDE软路由后台
+### 九、外网访问esxi后台管理、群晖NAS、群晖NAS客户端DS Photo、LEDE软路由后台
 ```
 [common]
 server_addr = 118.24.127.138             #更换为自己服务器IP地址
@@ -272,7 +272,7 @@ local_ip = 127.0.0.1
 local_port = 5000
 custom_domains = nas.veelove.cn          #更换为自己的域名
 ```
-十、用谷歌云和vultr服务器搭建frp无法使用 需要开放7000端口
+### 十、用谷歌云和vultr服务器搭建frp无法使用 需要开放7000端口
 
 （一）首先检查某端口是否开启：
  ```
@@ -312,7 +312,7 @@ systemctl status firewalld
 ```
 systemctl stop firewalld
 ```
-十一、如何让Frp在群晖中自动开机运行
+### 十一、如何让Frp在群晖中自动开机运行
 
 1.进入群晖控制面板》任务计划》新增》触发任务》用户定义的脚本
 
@@ -338,7 +338,7 @@ systemctl stop firewalld
 
 方法：
 
-1、添加rc-local.service
+### 1、添加rc-local.service
 ```
 #以下为一整条命令，一起复制运行
 cat > /etc/systemd/system/rc-local.service <<EOF
@@ -358,7 +358,7 @@ SysVStartPriority=99
 WantedBy=multi-user.target
 EOF
 ```
-2、新建rc-local文件
+### 2、新建rc-local文件
 ```
 #以下为一整条命令，一起复制运行
 cat > /etc/rc.local <<EOF
@@ -378,7 +378,7 @@ cat > /etc/rc.local <<EOF
 exit 0
 EOF
 ```
-3、添加权限并设置开机自启
+### 3、添加权限并设置开机自启
 ```
 chmod +x /etc/rc.local
 systemctl enable rc-local
