@@ -1,6 +1,6 @@
 ## k2p启用frp客户端：
 
-由于无灯版自带FRP是Xfrp版本，配置后无法使用，后发现网上小伙伴已经有解决办法。
+由于无灯版自带FRP是Xfrp版本，配置后无法使用，后发现网上小伙伴已经有解决办法。frpc frps.ini和frpc.ini 为本人自用。
 
 ### 1、将配置好的frpc.ini上传到K2P目录“/etc/storage”
 
@@ -19,7 +19,7 @@ sleep 10 && wget -P /tmp https://raw.githubusercontent.com/pqguanyinli/frpc/mast
 ### 3、重启路由
 
 ##
-> frpc frps.ini和frpc.ini 为本人自用，k2p路由器frpc最新客户端下载：http://opt.cn2qq.com/opt-file/frpc
+> k2p路由器frpc最新客户端下载：http://opt.cn2qq.com/opt-file/frpc
 >
 > frp 官方使用详细说明：https://github.com/fatedier/frp/blob/master/README_zh.md
 >
