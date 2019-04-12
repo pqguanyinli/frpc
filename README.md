@@ -85,6 +85,10 @@ vhost_https_port = 443
 
 ### 四、启动服务端
 
+首先设置frps可执行权限
+
+chmod +x ./frps
+
 临时启动
 ```
 ./frps -c ./frps.ini
@@ -118,6 +122,10 @@ custom_domains = www.veelove.cn,veelove.cn
 #所绑定的公网服务器域名，一级、二级域名都可以，绑定多个域名时用英文“,”分开
 ```
 ### 六、启动客户端
+
+首先设置frpc可执行权限
+
+chmod +x ./frpc
 
 临时启动
 ```
